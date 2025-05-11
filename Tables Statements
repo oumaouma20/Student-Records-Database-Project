@@ -1,0 +1,39 @@
+-- CREATE DATABASE StudentRecordsdb;
+
+
+ USE StudentRecordsdb;
+--  create  Student info tables
+CREATE TABLE student_info (
+student_id INT PRIMARY KEY,
+studentName varchar(100) NOT NULL,
+date_of_birth DATE  NOT NULL,
+current_age INT NOT NULL,
+gender varchar(20) NOT NULL,
+email varchar(50) UNIQUE NOT NULL,
+payment_Records INT NOT NULL
+);
+
+-- -- create courses table
+CREATE TABLE Courses(
+Class_Id INT PRIMARY KEY,
+Class_Number INT NOT NULL,
+Class_Name varchar(100) NOT NULL
+);
+
+-- CREATE GRADES TABLE
+CREATE TABLE GRADES(
+student_id INT NOT NULL,
+Class_Id  INT NOT NULL,
+semester_id INT NOT NULL,
+grades DECIMAL(10,2) NOT NULL,
+FOREIGN KEY (student_id) REFERENCES Student_info(student_id),
+FOREIGN KEY (Class_Id) REFERENCES Courses(Class_Id),
+FOREIGN KEY (semester_id)REFERENCES Semester(semester_id)
+);
+
+-- CREATE SEMESTER TABLE
+CREATE TABLE Semester(
+semester_id INT PRIMARY KEY,
+semester varchar(100) NOT NULL,
+start_date DATE NOT NULL
+);

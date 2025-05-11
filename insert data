@@ -1,0 +1,69 @@
+USE studentrecordsdb;
+-- -- INSERT DATA INTO STUDENT INFO TABLE
+INSERT INTO student_info (student_id, studentName, date_of_birth, current_age, gender, email, payment_Records)
+VALUES
+(22590, 'emmanuelouma', '2025-05-25', 25, 'MALE', 'ouma20@gmail.com', 15000),
+(22591, 'janedoe', '2000-04-12', 25, 'FEMALE', 'janedoe@gmail.com', 18000),
+(22592, 'michaelkimani', '1999-09-10', 26, 'MALE', 'mkimani@gmail.com', 20000),
+(22593, 'lucywanjiku', '2001-03-05', 24, 'FEMALE', 'lucyw@gmail.com', 17000),
+(22594, 'kevinotieno', '2002-07-25', 22, 'MALE', 'kotieno@gmail.com', 15500),
+(22595, 'anitamwende', '1998-11-30', 26, 'FEMALE', 'anitamwende@gmail.com', 16000),
+(22596, 'johnmutiso', '2000-01-20', 25, 'MALE', 'jmutiso@gmail.com', 14500),
+(22597, 'ruthnyambura', '2001-05-14', 24, 'FEMALE', 'ruthny@gmail.com', 19000),
+(22598, 'davidkiptoo', '1999-12-01', 25, 'MALE', 'davidk@gmail.com', 17500),
+(22599, 'susanmburu', '2003-02-18', 22, 'FEMALE', 'susanmburu@gmail.com', 14000),
+(22600, 'elvisomondi', '2002-06-09', 23, 'MALE', 'elviso@gmail.com', 21000),
+(22601, 'mercycherono', '2001-08-30', 24, 'FEMALE', 'mcherono@gmail.com', 19500),
+(22602, 'peterkaranja', '1999-10-17', 26, 'MALE', 'pkaranja@gmail.com', 18500),
+(22603, 'gracenyawira', '2000-12-25', 24, 'FEMALE', 'gracenyawira@gmail.com', 15500),
+(22604, 'tonyngugi', '2001-04-03', 24, 'MALE', 'tonyngugi@gmail.com', 16500),
+(22605, 'fionarotich', '2003-11-11', 21, 'FEMALE', 'fionarotich@gmail.com', 15000);
+
+
+USE studentrecordsdb;
+-- -- INSERT DATA INTO courses TABLE
+INSERT INTO courses (Class_Id, Class_Number, Class_Name)
+VALUES
+(1 , 'COM 201','Introduction to Communication I'),
+(2, 'COM 202','Introduction to Communication II'),
+(3, 'COM 210','Introductory Communication Topics'),
+(4, 'COM 220','Introduction to Public Speaking'),
+(5, 'ENGL 101', 'Writing from Sources I (5)'),
+(6, 'ENGL 102', 'Critical Reading & Writing (5)'),
+(7, 'ENGL 103', 'Writing from Sources'),
+(8, 'ENGL 109', 'Introductory Composition'),
+(9, 'ENGL 111','Composition: Literature'),
+(10, 'ECON 200','Introduction to Microeconomics'),
+(11, 'ECON 201','Introduction to Macroeconomics'),
+(12, 'ECON 235','Introduction to Environmental Economics'),
+(13, 'ECON 300','Intermediate Microeconomics'),
+(14, 'ECON 301','Intermediate Macroeconomics');
+
+USE studentrecordsdb;
+-- -- INSERT DATA INTO semester TABLE
+INSERT INTO semester(semester_id, semester, start_date)
+VALUES
+  (1, 'Fall 2019', '2019-09-01'),
+  (2, 'Spring 2020', '2020-01-15'),
+  (3, 'Summer 2020', '2020-05-10'),
+  (4, 'Fall 2020', '2020-09-01'),
+  (5, 'Spring 2021', '2021-01-12'),
+  (6, 'Summer 2021', '2021-05-17'),
+  (7, 'Fall 2021', '2021-09-06'),
+  (8, 'Spring 2022', '2022-01-10'),
+  (9, 'Summer 2022', '2022-05-16'),
+  (10, 'Fall 2022', '2022-09-05'),
+  (11, 'Spring 2023', '2023-01-09');
+-- -- INSERT DATA INTO GRADES TABLE
+  INSERT INTO grades (student_id, Class_Id, semester_id, grades)
+VALUES
+  (22590, 1, 1, 'A'),
+  (22591, 2, 2, 'B+'),
+  (22592, 3, 2, 'A-'),
+  (22593, 4, 3, 'B'),
+  (22594, 5, 3, 'C+'),
+  (22595, 6, 4, 'A'),
+  (22596, 7, 4, 'B-'),
+  (22597, 8, 5, 'A'),
+  (22598, 9, 5, 'B+'),
+  (22599, 10, 6, 'C');
